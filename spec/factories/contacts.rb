@@ -4,10 +4,10 @@ FactoryBot.define do
   factory :contact do
     name { 'Eduardo' }
     lastname { 'Hernandez' }
-    phone { '4771234556' }
-    phone_type { 1 }
+    phone { '477 123 4556' }
+    phone_type { 'mobile' }
     email { 'eduardo.garcia@magmalabs.io' }
-    email_type { 1 }
+    email_type { 'personal' }
     notes { 'No notes' }
   end
 end

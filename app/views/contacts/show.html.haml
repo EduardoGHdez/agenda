@@ -1,0 +1,23 @@
+- if notice
+  .alert.alert-secondary.text-center= notice
+.container
+  .d-flex.flex-column
+    .contact-title
+      =link_to root_path do
+        .text-white= fa_icon 'arrow-left', class: 'large-icon'
+    .contact-info
+      .avatar
+        .text-muted= fa_icon 'camera', class: 'large-icon'
+      %h2= "#{@contact.name} #{@contact.lastname}"
+      .row
+        %h3.mr-2= fa_icon 'phone' 
+        %h3= @contact.phone
+      .row
+        %h3.mr-2= fa_icon 'mail' 
+        %h3= @contact.email
+      =link_to edit_contact_path(@contact) do
+        .btn.btn-info.btn-lg.text-white.mt-4
+          .d-flex.flex-row.ml-2.mr-2
+            %h4.mr-2= fa_icon 'edit'
+            %h4 Edit
+
