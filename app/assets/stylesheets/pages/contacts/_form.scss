@@ -1,0 +1,38 @@
+.form-title {
+  background: $primary;
+  box-shadow: $shadow;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacer;
+  padding: $spacer * 2;
+}
+
+.form {
+  align-items: center;
+  background-color: $light;
+  box-shadow: $shadow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $spacer;
+  width: 50vw;
+
+  .action {
+    display: flex;
+    justify-content: center;
+
+    .btn {
+      width: 150px;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    justify-content: stretch;
+
+    .form-control {
+      margin: 2px;
+    }
+  }
+}
