@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Contact, type: :model do
   it { should validate_presence_of :name }
+  it { should belong_to :user }
 
   describe '#phone_type' do
     context 'when phone type is valid' do
