@@ -31,17 +31,15 @@
 }
 
 .float {
+  align-items: center;
+  background-color: var(--red);
   border-radius: 50%;
   box-shadow: $shadow;
+  display: flex;
   height: 60px;
+  justify-content: center;
   transition: all .3s cubic-bezier(.25, .8, .25, 1);
   width: 60px;
-
-  .image {
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-  }
 }
 
 .float:hover {

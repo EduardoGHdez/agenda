@@ -14,5 +14,6 @@
             .row= "#{contact.name} #{contact.lastname}"
             .row= contact.phone 
             .row= contact.email
-    = link_to new_contact_path, class: 'align-self-end float' do
-      =image_tag"https://cdn.pixabay.com/photo/2017/01/10/23/01/icon-1970474_960_720.png", class: "image"
+    .float.align-self-end
+      = link_to new_contact_path do
+        .text-white= fa_icon 'plus', class: 'large-icon'
