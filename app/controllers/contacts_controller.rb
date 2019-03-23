@@ -78,7 +78,8 @@ class ContactsController < ApplicationController
       :email,
       :email_type,
       :notes,
-      :user_id
+      :user_id,
+      :avatar
     )
   end
 end
