@@ -1,0 +1,11 @@
+.container
+  .d-flex.flex-column
+    .form-title
+      = link_to root_path do
+        .text-white= fa_icon 'arrow-left', class: 'large-icon'
+      %h1
+        %b New contact
+      %br
+    .form
+      = render 'form'
+

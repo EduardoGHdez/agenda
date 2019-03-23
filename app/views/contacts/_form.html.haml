@@ -1,0 +1,24 @@
+= form_for @contact do |f|
+  - if @contact.errors.any?
+    .alert.alert-warning
+      %ul
+        - @contact.errors.full_messages.each do |message|
+          %li= message
+  .form-group
+    = fa_icon 'user', class: 'large-icon mr-2 text-muted'
+    = f.text_field :name, placeholder: 'Name', class: 'form-control'
+    = f.text_field :lastname, placeholder: 'Lastname', class: 'form-control'
+  .form-group
+    = fa_icon 'phone', class: 'large-icon mr-2 text-muted'
+    .input-group
+      = f.telephone_field :phone, placeholder: 'Phone', pattern: '[0-9]{3} [0-9]{3} [0-9]{4}', title: 'Ej: 081 222 2224', class: 'form-control'
+      = f.select :phone_type, Contact.phone_types.keys, class: 'form-control'
+  .form-group
+    = fa_icon 'envelope-square', class: 'large-icon m-2 text-muted'
+    .input-group
+      = f.email_field :email, placeholder: 'Email', class: 'form-control'
+      = f.select :email_type, Contact.email_types.keys, class: 'form-control'
+  .form-group
+    = f.text_area :notes, placeholder: 'Notes', class: 'form-control'
+  .action
+    = f.submit 'Save', class: 'btn btn-success'

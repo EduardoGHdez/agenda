@@ -1,0 +1,49 @@
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  overflow-y: scroll;
+  width: 50vw;
+
+  .contact {
+    align-items: center;
+    background-color: $light;
+    box-shadow: $shadow;
+    color: $black;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: all .3s cubic-bezier(.25, .8, .25, 1);
+
+    .image {
+      height: 70px;
+      margin: 10px;
+      width: 70px;
+    }
+
+  }
+
+  .contact:hover {
+    box-shadow: $hover-shadow;
+  }
+}
+
+.float {
+  border-radius: 50%;
+  box-shadow: $shadow;
+  height: 60px;
+  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+  width: 60px;
+
+  .image {
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.float:hover {
+  box-shadow: $hover-shadow;
+}
