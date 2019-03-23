@@ -9,7 +9,12 @@
     .contacts-list
       -@contacts.each do |contact|
         = link_to contact, class: 'contact' do
-          = image_tag "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Google_Contacts_logo_vector.svg/1200px-Google_Contacts_logo_vector.svg.png", class: "image"
+          - if contact.avatar.attached?
+            .avatar
+              = image_tag contact.avatar, class: 'avatar-image'
+          -else 
+            .text-muted.m-4= fa_icon 'user', class: 'large-icon'
+
           .d-flex.flex-column.justify-content-center.m-4
             .row= "#{contact.name} #{contact.lastname}"
             .row= contact.phone 
