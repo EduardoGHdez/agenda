@@ -9,5 +9,6 @@ FactoryBot.define do
     email { 'eduardo.garcia@magmalabs.io' }
     email_type { 'personal' }
     notes { 'No notes' }
+    user
   end
 end

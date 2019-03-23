@@ -4,6 +4,7 @@
       %ul
         - @contact.errors.full_messages.each do |message|
           %li= message
+  = f.hidden_field :user_id, value: current_user.id
   .form-group
     = fa_icon 'user', class: 'large-icon mr-2 text-muted'
     = f.text_field :name, placeholder: 'Name', class: 'form-control'
