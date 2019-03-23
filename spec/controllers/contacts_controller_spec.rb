@@ -3,7 +3,10 @@
 require 'rails_helper'
 
 RSpec.describe ContactsController, type: :controller do
-  let(:contact) { create(:contact) }
+  before { sign_in user }
+
+  let(:contact) { create(:contact, user_id: user.id) }
+  let(:user) { create :user }
 
   describe 'GET #index' do
     it 'returns a success response' do
@@ -41,10 +44,10 @@ RSpec.describe ContactsController, type: :controller do
     subject { post :create, params: { contact: params } }
 
     context 'with valid params' do
-      let(:params) { attributes_for :contact }
+      let(:params) { attributes_for(:contact, user_id: user.id) }
 
       it 'creates a new Contact' do
-        contact
+        contact.reload
         expect { subject }.to change(Contact, :count).by(1)
       end
 

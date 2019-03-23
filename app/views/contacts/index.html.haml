@@ -1,6 +1,11 @@
 .container
   .d-flex.flex-column
-    %h2.bg-primary.text-center.text-white.p-4 Contacts
+    .d-flex.justify-content-between.bg-primary.text-white.p-4
+      %br
+      %h2 Contacts
+      = link_to destroy_user_session_path, method: :delete do
+        .text-white= fa_icon 'sign-out', class: 'large-icon'
+        %br
     .contacts-list
       -@contacts.each do |contact|
         = link_to contact, class: 'contact' do
