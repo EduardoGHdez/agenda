@@ -4,6 +4,11 @@
       %ul
         - @contact.errors.full_messages.each do |message|
           %li= message
+  .d-flex.justify-content-center
+    - if @contact.avatar.attached?
+      .avatar
+        = image_tag @contact.avatar, id:'avatar', class: 'avatar-image'
+  =f.file_field :avatar
   = f.hidden_field :user_id, value: current_user.id
   .form-group
     = fa_icon 'user', class: 'large-icon mr-2 text-muted'
