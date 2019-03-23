@@ -5,7 +5,10 @@
         .text-white= fa_icon 'arrow-left', class: 'large-icon'
     .contact-info
       .avatar
-        .text-muted= fa_icon 'camera', class: 'large-icon'
+        - if @contact.avatar.attached?
+          = image_tag @contact.avatar, class: 'avatar-image'
+        -else 
+          .text-muted= fa_icon 'camera', class: 'large-icon'
       %h2= "#{@contact.name} #{@contact.lastname}"
       .row
         %h3.mr-2= fa_icon 'phone' 

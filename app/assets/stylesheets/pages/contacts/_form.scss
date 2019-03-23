@@ -18,6 +18,23 @@
   padding: $spacer;
   width: 50vw;
 
+  .avatar {
+    align-items: center;
+    background-color: $light;
+    border-radius: 50%;
+    box-shadow: $shadow;
+    display: flex;
+    height: 150px;
+    justify-content: center;
+    overflow: hidden;
+    width: 150px;
+
+    .avatar-image {
+      height: 150px; 
+      width: auto;
+    }
+  }
+
   .action {
     display: flex;
     justify-content: center;

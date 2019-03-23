@@ -26,6 +26,14 @@
     justify-content: center;
     margin: $spacer * 2;
     margin-top: -95px;
+    overflow:hidden;
     width: 150px;
+
+    .avatar-image {
+      border-radius:50%; 
+      height: 150px; 
+      margin: 0 auto;
+      width: auto;
+    }
   }
 }

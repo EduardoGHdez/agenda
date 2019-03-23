@@ -17,12 +17,23 @@
     text-decoration: none;
     transition: all .3s cubic-bezier(.25, .8, .25, 1);
 
-    .image {
+    .avatar {
+      align-items: center;
+      background-color: $light;
+      border-radius: 50%;
+      box-shadow: $shadow;
+      display: flex;
       height: 70px;
-      margin: 10px;
+      justify-content: center;
+      margin: $spacer;
+      overflow: hidden;
       width: 70px;
-    }
 
+      .avatar-image {
+        height: 70px; 
+        width: auto;
+      }
+    }
   }
 
   .contact:hover {
