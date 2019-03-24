@@ -16,9 +16,8 @@
       .row
         %h3.mr-2= fa_icon 'mail' 
         %h3= @contact.email
-      =link_to edit_contact_path(@contact) do
-        .btn.btn-info.btn-lg.text-white.mt-4
-          .d-flex.flex-row.ml-2.mr-2
-            %h4.mr-2= fa_icon 'edit'
-            %h4 Edit
-
+      .d-flex.flex-row.align-self-end
+        = link_to edit_contact_path(@contact) do
+          %h3.m-4.text-muted= fa_icon 'edit'
+        = link_to @contact, method: :delete, data: { confirm: 'Are you sure?' } do
+          %h3.m-4.text-muted= fa_icon 'trash'
